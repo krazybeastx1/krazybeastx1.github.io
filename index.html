@@ -3,218 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthikeswar J - Covert Ops Dashboard</title>
+    <title>Karthikeswar J - Cyberpunk Hacker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Security Warning Banner -->
-    <div class="warning-banner">
-        <div class="warning-content">
-            <span class="warning-class">CLASSIFIED</span>
-            <span>// AUTHORIZED PERSONNEL ONLY //</span>
-            <span class="warning-id">SECURITY CLEARANCE: OMEGA-9</span>
-        </div>
-    </div>
+    <!-- CRT Monitor Effect Overlay -->
+    <div class="crt-overlay"></div>
 
     <!-- Main Container -->
-    <div class="dashboard">
-        <!-- Matrix Background -->
-        <div class="matrix-background"></div>
+    <div class="cyberpunk-container">
+        <!-- Header with ASCII Art -->
+        <header class="header">
+            <pre class="ascii-art">
+  _____ _   _ ____  _   _ _____
+ | ____| \ | |  _ \| \ | | ____|
+ |  _| |  \| | | | |  \| |  _|
+ | |___| |\  | |_| | |\  | |___
+ |_____|_| \_|____/|_| \_|_____|
+            </pre>
+        </header>
 
-        <!-- Scanlines -->
-        <div class="scanlines"></div>
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">>_ ACCESS MAINFRAME</a></li>
+                <li><a href="#htb">>_ HTB PROFILE</a></li>
+                <li><a href="#tryhackme">>_ TRYHACKME PROFILE</a></li>
+                <li><a href="#blog">>_ INTEL BLOG</a></li>
+                <li><a href="#resume">>_ OPERATIVE DOSSIER</a></li>
+            </ul>
+        </nav>
 
-        <!-- VHS Glitch -->
-        <div class="vhs-glitch"></div>
-
-        <!-- Content -->
-        <div class="content">
-            <!-- Navigation -->
-            <nav class="terminal-nav">
-                <div class="nav-item">>_ ACCESS MAINFRAME</div>
-                <div class="nav-item">>_ VIEW INTEL</div>
-                <div class="nav-item">>_ INITIATE PROTOCOL</div>
-                <div class="nav-item">>_ EXIT SYSTEM</div>
-            </nav>
-
-            <!-- About Section -->
-            <section class="terminal-window about">
-                <div class="terminal-header">
-                    <span class="terminal-title">ABOUT OPERATIVE</span>
-                    <div class="terminal-controls">
-                        <div class="control red"></div>
-                        <div class="control yellow"></div>
-                        <div class="control green"></div>
-                    </div>
-                </div>
+        <!-- Content Grid -->
+        <section class="content-grid">
+            <!-- About -->
+            <article class="terminal-window" id="about">
+                <header class="terminal-header">
+                    <h2>ABOUT OPERATIVE</h2>
+                </header>
                 <div class="terminal-body">
-                    <p>Designation: <span class="highlight-red">Karthikeswar J</span></p>
-                    <p>Clearance: <span class="highlight-blue">OMEGA-9</span></p>
-                    <p>Specialization: <span class="highlight-green">CYBER INTRUSION</span></p>
-                    <p>Status: <span class="blink">ACTIVE</span></p>
+                    <p>Designation: <span class="neon-cyan">Karthikeswar J</span></p>
+                    <p>Clearance: <span class="neon-lime">OMEGA-9</span></p>
+                    <p>Specialization: <span class="neon-cyan">CYBER INTRUSION</span></p>
+                    <p>Status: <span class="blink neon-lime">ACTIVE</span></p>
                 </div>
-                <div class="terminal-prompt">>_ </div>
-                <div class="terminal-cursor blink"></div>
-            </section>
+            </article>
 
-            <!-- Hack The Box -->
-            <section class="terminal-window htb">
-                <div class="terminal-header">
-                    <span class="terminal-title">HTB PROFILE</span>
-                    <div class="terminal-controls">
-                        <div class="control red"></div>
-                        <div class="control yellow"></div>
-                        <div class="control green"></div>
-                    </div>
-                </div>
+            <!-- HTB -->
+            <article class="terminal-window" id="htb">
+                <header class="terminal-header">
+                    <h2>HTB PROFILE</h2>
+                </header>
                 <div class="terminal-body">
-                    <p><a href="https://app.hackthebox.com/users/1241178" class="link">https://app.hackthebox.com/users/1241178</a></p>
+                    <p><a href="https://app.hackthebox.com/users/1241178" class="neon-cyan">https://app.hackthebox.com/users/1241178</a></p>
                 </div>
-                <div class="terminal-prompt">>_ </div>
-                <div class="terminal-cursor blink"></div>
-            </section>
+                <div class="terminal-footer">
+                    <div class="scrolling-code"></div>
+                </div>
+            </article>
 
             <!-- TryHackMe -->
-            <section class="terminal-window tryhackme">
-                <div class="terminal-header">
-                    <span class="terminal-title">TRYHACKME PROFILE</span>
-                    <div class="terminal-controls">
-                        <div class="control red"></div>
-                        <div class="control yellow"></div>
-                        <div class="control green"></div>
-                    </div>
-                </div>
+            <article class="terminal-window" id="tryhackme">
+                <header class="terminal-header">
+                    <h2>TRYHACKME PROFILE</h2>
+                </header>
                 <div class="terminal-body">
-                    <p><a href="https://tryhackme.com/p/nameiskarthik1" class="link">https://tryhackme.com/p/nameiskarthik1</a></p>
+                    <p><a href="https://tryhackme.com/p/nameiskarthik1" class="neon-cyan">https://tryhackme.com/p/nameiskarthik1</a></p>
                 </div>
-                <div class="terminal-prompt">>_ </div>
-                <div class="terminal-cursor blink"></div>
-            </section>
+                <div class="terminal-footer">
+                    <div class="scrolling-code"></div>
+                </div>
+            </article>
 
             <!-- Blog -->
-            <section class="terminal-window blog">
-                <div class="terminal-header">
-                    <span class="terminal-title">INTEL BLOG</span>
-                    <div class="terminal-controls">
-                        <div class="control red"></div>
-                        <div class="control yellow"></div>
-                        <div class="control green"></div>
-                    </div>
-                </div>
+            <article class="terminal-window" id="blog">
+                <header class="terminal-header">
+                    <h2>INTEL BLOG</h2>
+                </header>
                 <div class="terminal-body">
-                    <p><a href="https://krazybeastx.gitbook.io/home" class="link">https://krazybeastx.gitbook.io/home</a></p>
+                    <p><a href="https://krazybeastx.gitbook.io/home" class="neon-cyan">https://krazybeastx.gitbook.io/home</a></p>
                 </div>
-                <div class="terminal-prompt">>_ </div>
-                <div class="terminal-cursor blink"></div>
-            </section>
+                <div class="terminal-footer">
+                    <div class="scrolling-code"></div>
+                </div>
+            </article>
 
             <!-- Resume -->
-            <section class="terminal-window resume">
-                <div class="terminal-header">
-                    <span class="terminal-title">OPERATIVE DOSSIER</span>
-                    <div class="terminal-controls">
-                        <div class="control red"></div>
-                        <div class="control yellow"></div>
-                        <div class="control green"></div>
-                    </div>
-                </div>
+            <article class="terminal-window" id="resume">
+                <header class="terminal-header">
+                    <h2>OPERATIVE DOSSIER</h2>
+                </header>
                 <div class="terminal-body">
-                    <p><a href="KarthikeswarJ.pdf" class="link" target="_blank">DOWNLOAD DOSSIER (PDF)</a></p>
+                    <p><a href="KarthikeswarJ.pdf" class="neon-cyan" target="_blank">DOWNLOAD DOSSIER (PDF)</a></p>
                 </div>
-                <div class="terminal-prompt">>_ </div>
-                <div class="terminal-cursor blink"></div>
-            </section>
-        </div>
+                <div class="terminal-footer">
+                    <div class="scrolling-code"></div>
+                </div>
+            </article>
+        </section>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div>C 2026 karthikeswar</div>
+    </footer>
+
     <script>
-        // Buzzing sound effect
-        function startBuzz() {
-            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            const oscillator = audioCtx.createOscillator();
-            const gainNode = audioCtx.createGain();
+        // Scrolling code effect
+        function createScrollingCode() {
+            const containers = document.querySelectorAll('.scrolling-code');
+            const codeLines = [
+                '01001000 01100101 01101100 01101100 01101111',
+                '01010111 01101111 01110010 01101100 01100100',
+                '01000011 01110100 01100101 01100010 01110010',
+                '01010100 01101000 01100101 00100000 01100011',
+                '01101000 01100001 01101100 01100011 01101011',
+                '01100110 01101100 01100101 01110010 00100000',
+                '01110011 01110100 01100001 01110010 01110100',
+                '01000100 01100101 01100011 01101000 01100101',
+                '01010011 01110100 01100001 01110100 01110011',
+                '01000110 01101100 01100001 01100111 00100000'
+            ];
 
-            oscillator.type = 'sine';
-            oscillator.frequency.value = 40; // Low buzz
-            gainNode.gain.value = 0.02; // Very low volume
+            containers.forEach(container => {
+                let lineIndex = 0;
+                const lineElement = document.createElement('div');
+                lineElement.className = 'code-line';
+                lineElement.textContent = codeLines[lineIndex];
+                container.appendChild(lineElement);
 
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-
-            oscillator.start();
-
-            // Stop when page is hidden
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    oscillator.stop();
-                } else {
-                    // Restart if becomes visible
-                    if (oscillator.context.state === 'suspended') {
-                        oscillator.context.resume();
-                    }
+                function scroll() {
+                    lineIndex = (lineIndex + 1) % codeLines.length;
+                    lineElement.textContent = codeLines[lineIndex];
+                    // Simple fade effect
+                    lineElement.style.opacity = '0';
+                    setTimeout(() => {
+                        lineElement.style.opacity = '1';
+                    }, 50);
                 }
+
+                setInterval(scroll, 800);
             });
         }
 
-        // Initialize buzz
-        window.addEventListener('load', startBuzz);
-
-        // Matrix rain effect
-        function createMatrixRain() {
-            const matrixBg = document.querySelector('.matrix-background');
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            const fontSize = 14;
-            const columns = Math.floor(width / fontSize);
-
-            const drops = [];
-            for (let i = 0; i < columns; i++) {
-                drops.push(0);
-            }
-
-            function draw() {
-                // Create a semi-transparent black background for trailing effect
-                const bg = document.createElement('div');
-                bg.style.position = 'absolute';
-                bg.style.top = '0';
-                bg.style.left = '0';
-                bg.style.width = '100%';
-                bg.style.height = '100%';
-                bg.style.background = 'rgba(0, 0, 0, 0.05)';
-                bg.style.pointerEvents = 'none';
-                matrixBg.appendChild(bg);
-
-                // Remove old backgrounds to prevent buildup
-                if (matrixBg.children.length > 50) {
-                    matrixBg.removeChild(matrixBg.firstChild);
-                }
-
-                // Draw characters
-                matrixBg.innerHTML += Array.from({length: columns})
-                    .map((_, colIndex) => {
-                        const text = String.fromCharCode(0x30A0 + Math.random() * 0x60); // Katakana-like
-                        const x = colIndex * fontSize;
-                        const y = drops[colIndex] * fontSize;
-
-                        if (y > height && Math.random() > 0.975) {
-                            drops[colIndex] = 0;
-                        }
-
-                        drops[colIndex]++;
-
-                        return `<span style="position:absolute; left:${x}px; top:${y - fontSize}px; color:#7fff00; font-family:monospace;">${text}</span>`;
-                    })
-                    .join('');
-
-                requestAnimationFrame(draw);
-            }
-
-            draw();
-        }
-
-        // Initialize matrix rain
-        window.addEventListener('load', createMatrixRain);
-        window.addEventListener('resize', createMatrixRain);
+        // Initialize
+        window.addEventListener('load', createScrollingCode);
     </script>
 </body>
 </html>
