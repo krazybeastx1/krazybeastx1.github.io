@@ -3,33 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthikeswar J - Portfolio</title>
+    <title>Karthikeswar J - Hacker Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header class="glass">
+        <header class="hacker-header">
             <h1>Karthikeswar J</h1>
-            <p>Security Enthusiast | CTF Player</p>
+            <p>Security Researcher | CTF Player | Bug Bounty Hunter</p>
         </header>
-        <section class="glass">
+
+        <section class="hacker-section">
             <h2>About Me</h2>
-            <p>Passionate about cybersecurity, participating in CTFs, and developing security tools.</p>
+            <p>Passionate about cybersecurity, penetration testing, web application security, and participating in CTFs and bug bounty programs.</p>
         </section>
-        <section class="glass">
+
+        <section class="hacker-section">
+            <h2>GitHub Repositories</h2>
+            <div class="repo-list">
+                <!-- Repos will be inserted via JS or we can generate static list -->
+                <!-- We'll embed list using a script -->
+            </div>
+        </section>
+
+        <section class="hacker-section">
+            <h2>Hack The Box</h2>
+            <p><a href="https://app.hackthebox.com/users/1241178" target="_blank">My HTB Profile</a></p>
+        </section>
+
+        <section class="hacker-section">
+            <h2>TryHackMe</h2>
+            <p><a href="https://tryhackme.com/p/nameiskarthik1" target="_blank">My TryHackMe Profile</a></p>
+        </section>
+
+        <section class="hacker-section">
             <h2>Resume</h2>
             <p><a href="KarthikeswarJ.pdf" target="_blank">Download Resume (PDF)</a></p>
         </section>
-        <section class="glass">
-            <h2>Projects</h2>
-            <ul>
-                <li>KracKer - C++ password cracker for CTF</li>
-                <li>Fight Club AD CTF Lab</li>
-            </ul>
-        </section>
-        <footer class="glass">
+
+        <footer class="hacker-footer">
             <p>&copy; 2026 Karthikeswar J</p>
         </footer>
     </div>
+    <script>
+        // Fetch and display GitHub repos
+        async function loadRepos() {
+            try {
+                const response = await fetch('https://api.github.com/users/krazybeastx1/repos?per_page=100');
+                const repos = await response.json();
+                const repoList = document.querySelector('.repo-list');
+                repos.forEach(repo => {
+                    const repoDiv = document.createElement('div');
+                    repoDiv.className = 'repo-item';
+                    repoDiv.innerHTML = `
+                        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                        <p>${repo.description || 'No description'}</p>
+                    `;
+                    repoList.appendChild(repoDiv);
+                });
+            } catch (error) {
+                console.error('Error loading repos:', error);
+                document.querySelector('.repo-list').innerHTML = '<p>Error loading repositories.</p>';
+            }
+        }
+        loadRepos();
+    </script>
 </body>
 </html>

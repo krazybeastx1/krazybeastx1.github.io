@@ -5,57 +5,160 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    font-family: 'Courier New', Courier, monospace;
+    background: #000;
+    color: #0f0;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(0,255,0,.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0,255,0,.1) 0%, transparent 20%);
     min-height: 100vh;
     padding: 20px;
-    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        rgba(0,0,0,0.9)
+        urldata:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0yIDBoMjBMMjBWMjBIMFpNNjAweiI+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSBmaWxsPSIjMDAwIi8+PC9wYXRoPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iEwMCUiBmaWxsPSJ1cmwoI2dyaWQpIiAvPjwvc3ZnPg==);
+    pointer-events: none;
+    animation: moveGrid 10s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes moveGrid {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-.glass {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 25px;
+.hacker-header,
+.hacker-section,
+.hacker-footer {
+    background: rgba(0, 10, 0, 0.7);
+    border: 1px solid #0f0;
+    border-radius: 4px;
+    padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,255,0,0.3);
+    backdrop-filter: blur(2px);
 }
 
-h1, h2 {
-    color: #fff;
+h1, h2, h3 {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
     margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 1px solid #0f0;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
 p {
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 a {
-    color: #ffeb3b;
+    color: #0f0;
     text-decoration: none;
+    border-bottom: 1px dotted #0f0;
 }
 
 a:hover {
-    text-decoration: underline;
+    background: rgba(0,255,0,0.1);
+    text-shadow: 0 0 5px #0f0;
 }
 
-ul {
-    list-style: none;
+.repo-list {
+    display: grid;
+    gap: 15px;
 }
 
-li {
-    margin-bottom: 8px;
+.repo-item {
+    background: rgba(0, 10, 0, 0.5);
+    border: 1px solid #0f0;
+    border-radius: 4px;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.repo-item:hover {
+    background: rgba(0, 20, 0, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(0,255,0,0.4);
+}
+
+.repo-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.repo-item p {
+    font-size: 0.9em;
+    margin: 0;
 }
 
 footer {
     text-align: center;
     font-size: 0.9em;
-    opacity: 0.8;
+    opacity: 0.7;
+    margin-top: 30px;
+}
+
+/* Typing effect for header */
+h1 {
+    overflow: hidden;
+    border-right: .15em solid #0f0;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0f0 }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .hacker-header,
+    .hacker-section,
+    .hacker-footer {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
 }
