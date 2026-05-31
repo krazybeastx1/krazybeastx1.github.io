@@ -19,14 +19,6 @@
         </section>
 
         <section class="hacker-section">
-            <h2>GitHub Repositories</h2>
-            <div class="repo-list">
-                <!-- Repos will be inserted via JS or we can generate static list -->
-                <!-- We'll embed list using a script -->
-            </div>
-        </section>
-
-        <section class="hacker-section">
             <h2>Hack The Box</h2>
             <p><a href="https://app.hackthebox.com/users/1241178" target="_blank">My HTB Profile</a></p>
         </section>
@@ -45,28 +37,5 @@
             <p>&copy; 2026 Karthikeswar J</p>
         </footer>
     </div>
-    <script>
-        // Fetch and display GitHub repos
-        async function loadRepos() {
-            try {
-                const response = await fetch('https://api.github.com/users/krazybeastx1/repos?per_page=100');
-                const repos = await response.json();
-                const repoList = document.querySelector('.repo-list');
-                repos.forEach(repo => {
-                    const repoDiv = document.createElement('div');
-                    repoDiv.className = 'repo-item';
-                    repoDiv.innerHTML = `
-                        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-                        <p>${repo.description || 'No description'}</p>
-                    `;
-                    repoList.appendChild(repoDiv);
-                });
-            } catch (error) {
-                console.error('Error loading repos:', error);
-                document.querySelector('.repo-list').innerHTML = '<p>Error loading repositories.</p>';
-            }
-        }
-        loadRepos();
-    </script>
 </body>
 </html>
