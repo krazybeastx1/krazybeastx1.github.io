@@ -10,6 +10,8 @@ const TERMINAL = [
   { cmd: 'tail -1 exp.log', out: 'penetration testing intern @ seckio' },
 ];
 
+const HOSTS = ['krazybeastx@profile', 'karthikeswar@profile'];
+
 const PORTRAITS = [
   { file: 'portrait-1.jpg', state: 'original' },
   { file: 'portrait-2.jpg', state: 'render' },
@@ -124,6 +126,7 @@ export default function Hero() {
   const reduce = useReducedMotion();
   const { role } = useRotatingRole(profile.roles);
   const { role: displayName } = useRotatingRole(profile.aliases, 3400);
+  const { role: host } = useRotatingRole(HOSTS, 3400);
 
   const intro = (delay) =>
     reduce
@@ -233,7 +236,20 @@ export default function Hero() {
               <span className="terminal__dots" aria-hidden="true">
                 <i /><i /><i />
               </span>
-              <span className="mono">karthikeswar@profile: ~</span>
+              <span className="mono terminal__host" aria-hidden="true">
+                <AnimatePresence initial={false}>
+                  <motion.span
+                    key={host}
+                    className="terminal__host-text"
+                    initial={reduce ? false : { opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={reduce ? { opacity: 0 } : { opacity: 0, y: -6 }}
+                    transition={{ duration: 0.26, ease: [0.22, 0.61, 0.36, 1] }}
+                  >
+                    {host}: ~
+                  </motion.span>
+                </AnimatePresence>
+              </span>
               <span className="mono terminal__flag">rec</span>
             </div>
             <div className="terminal__body mono" aria-hidden="true">

@@ -1071,6 +1071,23 @@ main,
   text-transform: uppercase;
 }
 
+.terminal__host {
+  position: relative;
+  display: inline-block;
+  height: 1.2em;
+  min-width: 25ch;
+  overflow: hidden;
+}
+
+.terminal__host-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  color: var(--text-dim);
+}
+
 .terminal__body {
   padding: 15px;
   font-size: 0.72rem;
