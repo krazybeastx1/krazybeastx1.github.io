@@ -1,153 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthikeswar J - Cyberpunk Hacker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- CRT Monitor Effect Overlay -->
-    <div class="crt-overlay"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karthikeswar J — Security Researcher &amp; Penetration Tester</title>
+    <meta
+      name="description"
+      content="Karthikeswar J — penetration tester and security researcher working on web, API, and Active Directory attack paths. Top 1% on TryHackMe, HTB Season 11 top 250."
+    />
+    <meta name="theme-color" content="#08090d" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Karthikeswar J — Security Researcher &amp; Penetration Tester" />
+    <meta
+      property="og:description"
+      content="Penetration tester and security researcher. Web, API, and Active Directory attack paths."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307090c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%2334e7c8' text-anchor='middle'%3Ekj%3C/text%3E%3C/svg%3E" />
 
-    <!-- Main Container -->
-    <div class="cyberpunk-container">
-        <!-- Header with ASCII Art -->
-        <header class="header">
-            <pre class="ascii-art">
-  _____ _   _ ____  _   _ _____
- | ____| \ | |  _ \| \ | | ____|
- |  _| |  \| | | | |  \| |  _|
- | |___| |\  | |_| | |\  | |___
- |_____|_| \_|____/|_| \_|_____|
-            </pre>
-        </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
 
-        <!-- Navigation -->
-        <nav class="nav">
-            <ul>
-                <li><a href="#about">>_ ACCESS MAINFRAME</a></li>
-                <li><a href="#htb">>_ HTB PROFILE</a></li>
-                <li><a href="#tryhackme">>_ TRYHACKME PROFILE</a></li>
-                <li><a href="#blog">>_ INTEL BLOG</a></li>
-                <li><a href="#resume">>_ OPERATIVE DOSSIER</a></li>
-            </ul>
-        </nav>
-
-        <!-- Content Grid -->
-        <section class="content-grid">
-            <!-- About -->
-            <article class="terminal-window" id="about">
-                <header class="terminal-header">
-                    <h2>ABOUT OPERATIVE</h2>
-                </header>
-                <div class="terminal-body">
-                    <p>Designation: <span class="neon-cyan">Karthikeswar J</span></p>
-                    <p>Clearance: <span class="neon-lime">OMEGA-9</span></p>
-                    <p>Specialization: <span class="neon-cyan">CYBER INTRUSION</span></p>
-                    <p>Status: <span class="blink neon-lime">ACTIVE</span></p>
-                </div>
-            </article>
-
-            <!-- HTB -->
-            <article class="terminal-window" id="htb">
-                <header class="terminal-header">
-                    <h2>HTB PROFILE</h2>
-                </header>
-                <div class="terminal-body">
-                    <p><a href="https://app.hackthebox.com/users/1241178" class="neon-cyan">https://app.hackthebox.com/users/1241178</a></p>
-                </div>
-                <div class="terminal-footer">
-                    <div class="scrolling-code"></div>
-                </div>
-            </article>
-
-            <!-- TryHackMe -->
-            <article class="terminal-window" id="tryhackme">
-                <header class="terminal-header">
-                    <h2>TRYHACKME PROFILE</h2>
-                </header>
-                <div class="terminal-body">
-                    <p><a href="https://tryhackme.com/p/nameiskarthik1" class="neon-cyan">https://tryhackme.com/p/nameiskarthik1</a></p>
-                </div>
-                <div class="terminal-footer">
-                    <div class="scrolling-code"></div>
-                </div>
-            </article>
-
-            <!-- Blog -->
-            <article class="terminal-window" id="blog">
-                <header class="terminal-header">
-                    <h2>INTEL BLOG</h2>
-                </header>
-                <div class="terminal-body">
-                    <p><a href="https://krazybeastx.gitbook.io/home" class="neon-cyan">https://krazybeastx.gitbook.io/home</a></p>
-                </div>
-                <div class="terminal-footer">
-                    <div class="scrolling-code"></div>
-                </div>
-            </article>
-
-            <!-- Resume -->
-            <article class="terminal-window" id="resume">
-                <header class="terminal-header">
-                    <h2>OPERATIVE DOSSIER</h2>
-                </header>
-                <div class="terminal-body">
-                    <p><a href="KarthikeswarJ.pdf" class="neon-cyan" target="_blank">DOWNLOAD DOSSIER (PDF)</a></p>
-                </div>
-                <div class="terminal-footer">
-                    <div class="scrolling-code"></div>
-                </div>
-            </article>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div>C 2026 karthikeswar</div>
-    </footer>
-
-    <script>
-        // Scrolling code effect
-        function createScrollingCode() {
-            const containers = document.querySelectorAll('.scrolling-code');
-            const codeLines = [
-                '01001000 01100101 01101100 01101100 01101111',
-                '01010111 01101111 01110010 01101100 01100100',
-                '01000011 01110100 01100101 01100010 01110010',
-                '01010100 01101000 01100101 00100000 01100011',
-                '01101000 01100001 01101100 01100011 01101011',
-                '01100110 01101100 01100101 01110010 00100000',
-                '01110011 01110100 01100001 01110010 01110100',
-                '01000100 01100101 01100011 01101000 01100101',
-                '01010011 01110100 01100001 01110100 01110011',
-                '01000110 01101100 01100001 01100111 00100000'
-            ];
-
-            containers.forEach(container => {
-                let lineIndex = 0;
-                const lineElement = document.createElement('div');
-                lineElement.className = 'code-line';
-                lineElement.textContent = codeLines[lineIndex];
-                container.appendChild(lineElement);
-
-                function scroll() {
-                    lineIndex = (lineIndex + 1) % codeLines.length;
-                    lineElement.textContent = codeLines[lineIndex];
-                    // Simple fade effect
-                    lineElement.style.opacity = '0';
-                    setTimeout(() => {
-                        lineElement.style.opacity = '1';
-                    }, 50);
-                }
-
-                setInterval(scroll, 800);
-            });
-        }
-
-        // Initialize
-        window.addEventListener('load', createScrollingCode);
-    </script>
-</body>
+    <style>html{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;background:#08090d}</style>
+    <script type="module" crossorigin src="./assets/index-9o3CYBl7.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
+    <link rel="modulepreload" crossorigin href="./assets/motion-DsZ_b35F.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-Pvy15tla.js">
+    <link rel="stylesheet" crossorigin href="./assets/style-DKDIzx1o.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="max-width: 640px; margin: 12vh auto; padding: 0 24px; color: #e9eff5">
+        <h1 style="font-size: 2rem">Karthikeswar J</h1>
+        <p style="color: #93a1b2">
+          Security researcher and penetration tester — web, API, and Active Directory attack
+          paths. Top 1% on TryHackMe, HTB Season 11 top 250.
+        </p>
+        <p>
+          <a style="color: #34e7c8" href="mailto:karthikeswarj@gmail.com">karthikeswarj@gmail.com</a>
+          ·
+          <a style="color: #34e7c8" href="https://github.com/krazybeastx1">GitHub</a>
+          ·
+          <a style="color: #34e7c8" href="./KarthikeswarJ.pdf">Résumé</a>
+        </p>
+      </div>
+    </noscript>
+  </body>
 </html>
