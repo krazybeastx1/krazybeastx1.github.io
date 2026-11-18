@@ -11,7 +11,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <span className="footer__mark mono" aria-hidden="true">kj</span>
+          <span className="footer__mark" aria-hidden="true">
+            <img src="./favicon.svg" alt="" width="26" height="26" />
+          </span>
           <p className="mono muted">
             © {new Date().getFullYear()} {profile.name} — built with React &amp; Framer Motion
           </p>

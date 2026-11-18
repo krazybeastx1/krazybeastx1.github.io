@@ -449,13 +449,18 @@ main,
   place-items: center;
   width: 34px;
   height: 34px;
+  padding: 3px;
   border-radius: 10px;
-  background: rgba(128, 101, 216, 0.16);
+  background: #050608;
   border: 1px solid var(--line-strong);
-  color: var(--lavender);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  box-shadow: inset 0 0 18px rgba(128, 101, 216, 0.22);
+}
+
+.brand__mark img,
+.footer__mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand__dot {
@@ -2218,10 +2223,10 @@ main,
   place-items: center;
   width: 26px;
   height: 26px;
+  padding: 2px;
   border-radius: 8px;
   border: 1px solid var(--line);
-  color: var(--lavender);
-  font-size: 0.66rem;
+  background: #050608;
 }
 
 .footer p {

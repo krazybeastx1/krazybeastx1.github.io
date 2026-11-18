@@ -38,7 +38,7 @@ export default function Nav({ active }) {
         <div className="nav__inner">
           <a className="brand" href="#top" aria-label={`${profile.name} — home`}>
             <span className="brand__mark" aria-hidden="true">
-              kj
+              <img src="./favicon.svg" alt="" width="34" height="34" />
             </span>
             <span className="brand__text">
               {profile.name}
