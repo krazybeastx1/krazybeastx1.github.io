@@ -128,7 +128,8 @@ export const projects = [
 ];
 
 export const certifications = [
-  {
+	{name:'Certified Red Team Analyst',short:'CRTA',issuer:'CyberWarFare Labs',date:'Nov 2026'}
+	{
     name: 'Certified Cyber Security Analyst',
     short: 'C3SA',
     issuer: 'CyberWarfare Labs',
@@ -149,8 +150,8 @@ export const certifications = [
 export const certificationsUrl = `${profile.linkedin}details/certifications/`;
 
 export const achievements = [
-  { title: 'Pro Hacker', detail: 'Hack The Box rank' },
-  { title: 'Top 1% globally', detail: 'TryHackMe platform ranking' },
+  { title: 'Pro Hacker', detail: 'Hack The Box' },
+  { title: 'Top 1% globally', detail: 'TryHackMe' },
   { title: 'Rank 242 / 6000+', detail: 'Hack The Box Season 11' },
   { title: 'Rank 7 / 6000+ teams', detail: 'HTB Cyber Apocalypse CTF 2026 — The Salt Crown' },
 ];
