@@ -23,13 +23,13 @@ export const profile = {
 };
 
 // Opens the visitor's default mail client with a prefilled subject.
-export const mailto = `mailto:${profile.email}?subject=${encodeURIComponent('Hello Karthikeswar — portfolio enquiry')}`;
+export const mailto = `mailto:${profile.email}?subject=${encodeURIComponent('Hello Karthikeswar - saw your profile on ... ')}`;
 
 export const stats = [
   { value: 'Top 1%', label: 'TryHackMe global' },
   { value: '#242', label: 'HTB Season 11 · 6000+ players' },
   { value: '#7', label: 'HTB Cyber Apocalypse 2026 · team' },
-  { value: '4', label: 'Security certifications' },
+  { value: '5', label: 'Security certifications' },
   { value: '141', label: 'PwnSeC CTF 2026'},
 ];
 
@@ -48,23 +48,23 @@ export const socials = [
 
 export const skillGroups = [
   {
-    title: 'Security tooling',
-    caption: 'daily drivers',
-    items: ['Burp Suite', 'Nmap', 'Metasploit', 'Wireshark', 'Hydra', 'Gobuster', 'FFUF', 'Splunk', 'ELK Stack'],
+    title: 'Offensive Security',
+    caption: 'Daily Driver',
+    items: ['Burp Suite', 'Nmap', 'Metasploit', 'Wireshark', 'NetExec', 'BloodHound', 'Impacket(s)', 'Splunk', 'ELK Stack'],
   },
   {
     title: 'Domains',
-    caption: 'what I test',
-    items: ['VAPT', 'Web Security', 'API Security', 'Network Security', 'Active Directory', 'OWASP Top 10'],
+    caption: 'What I test',
+    items: ['VAPT', 'Web Security', 'API Security', 'Network Security', 'Active Directory'],
   },
   {
     title: 'Languages',
-    caption: 'what I write',
+    caption: 'What I write',
     items: ['Python', 'C++', 'Bash', 'JavaScript', 'Go', 'PowerShell'],
   },
   {
     title: 'Platforms',
-    caption: 'where I work',
+    caption: 'Where I work',
     items: ['Linux', 'Windows', 'macOS', 'Docker', 'Kubernetes', 'Git'],
   },
 ];
@@ -128,7 +128,7 @@ export const projects = [
 ];
 
 export const certifications = [
-	{name:'Certified Red Team Analyst',short:'CRTA',issuer:'CyberWarFare Labs',date:'Nov 2026'}
+	{name:'Certified Red Team Analyst',short:'CRTA',issuer:'CyberWarFare Labs',date:'Nov 2026', id: 'CRTA-6afd670aad503cfdbcc50b84'},
 	{
     name: 'Certified Cyber Security Analyst',
     short: 'C3SA',
